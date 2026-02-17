@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ALMA_NCIP_Lending_Client</Name>
+  <Author>Bill Jones, SUNY Geneseo; Modified by others</Author>
+  <Version>1.4</Version>
+  <Active>True</Active>
+  <Type>Server</Type>
+  <Description>Communicates with Alma via NCIP to move Lending requests. Optionally cancels internal Alma holds before checkout.</Description>
+  <Forms />
+  <Settings>
+    <Setting name="NCIP_Responder_URL" value="https://xxx.alma.exlibrisgroup.com/view/NCIPServlet" type="string">
+      <Description>Replace "xxx" with your institution's three letter Alma code.</Description>
+    </Setting>
+    
+    <Setting name="Alma_API_URL" value="https://api-na.hosted.exlibrisgroup.com/almaws/v1/" type="string">
+      <Description>The base URL for the Alma REST API.</Description>
+    </Setting>
+    <Setting name="Alma_API_Key" value="YOUR_API_KEY_HERE" type="string">
+      <Description>Alma API Key with Read/Write permissions for Bibs/Requests.</Description>
+    </Setting>
+
+    <Setting name="Cancel_Alma_Hold_Before_Checkout" value="true" type="boolean">
+      <Description>If true, the addon will attempt to cancel an internal Alma hold (found in the field below) before sending the NCIP checkout.</Description>
+    </Setting>
+    <Setting name="Alma_Hold_ID_Field" value="ItemInfo5" type="string">
+      <Description>The Transaction field where the Alma Request ID is stored (e.g. "Created 12345").</Description>
+    </Setting>
+
+    <Setting name="acceptItem_from_uniqueAgency_value" value="XXX" type="string">
+      <Description>Replace "XXX" with your institution's three letter Alma code.</Description>
+    </Setting>
+    <Setting name="ApplicationProfileType" value="ILL" type="string">
+      <Description>Input the Resource Sharing Partner code used in Alma.</Description>
+    </Setting>
+    <Setting name="ILLiad_field_to_get_barcode" value="ItemInfo3" type="string">
+      <Description>This field will be used as the item barcode to be sent to Alma.</Description>
+    </Setting>    
+    <Setting name="LendingCheckOutItemFailQueue" value="NCIP Error: LendingCheckOutItem Failed" type="string">
+      <Description>Queue for Lending Transactions if CheckOutItem fails.</Description>
+    </Setting>
+    <Setting name="LendingCheckInItemFailQueue" value="NCIP Error: LendingCheckInItem Failed" type="string">
+      <Description>Queue for Lending Transactions if CheckInItem fails.</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>ILLiad_Alma_NCIP_Lending.lua</File>
+  </Files>
+</Configuration>
