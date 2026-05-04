@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name>ALMA_NCIP_Lending_Client</Name>
-  <Author>Bill Jones, SUNY Geneseo; Modified by others</Author>
+  <Author>Bill Jones, SUNY Geneseo; Kurt Munson, Northwestern University Libraries (Modified by Matt Niehoff) (Holds Modifications by Robert Wilson)</Author>
   <Version>1.4</Version>
   <Active>True</Active>
-  <Type>Server</Type>
+  <Type>System</Type>
   <Description>Communicates with Alma via NCIP to move Lending requests. Optionally cancels internal Alma holds before checkout.</Description>
   <Forms />
   <Settings>

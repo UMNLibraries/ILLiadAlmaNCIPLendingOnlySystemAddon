@@ -2,7 +2,7 @@
 --Author:  Bill Jones III, SUNY Geneseo, IDS Project, jonesw@geneseo.edu
 --Modified by: Kurt Munson, Northwestern University, kmunson@northwestern.edu
 --Modified further by: Matt Niehoff, Minitex - University of Minnesota, nieho003@umn.edu    
---API functionaltiy added by Robert Wilson, University of Minnesota. 
+--Holds cancellation API functionaltiy added by Robert Wilson, University of Minnesota, wils3107@umn.edu
 --System Addon used for ILLiad to communicate with Alma through the NCIP protocol to move
 --Lending requests into the resource sharing libary in Alma when updated to filled and
 --to return items to thier perment location upon return.
